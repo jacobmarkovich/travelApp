@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8" />
+        <title>Travel App</title>
+        <link href="https://fonts.googleapis.com/css?family=Oswald:400,600,700|Ranga:400,700&display=swap" rel="stylesheet" />
+    </head>
+    <body>
+        <div id="app">
+            <div class="holder headline">
+                Travel App
+            </div>
+
+            <div class="holder location">
+                <label for="location">Destination:</label>
+                <input type="text" id="location" placeholder="Kansas City, Kansas" />
+            </div>
+            <div class="holder date">
+                <label for="date">Departure date:</label>
+                <input type="date" id="date" />
+            </div>
+            <div class="btn">
+                <button id="generate" type="submit">Generate</button>
+            </div>
+            <div class="pic">
+                <img id="destination" src="https://www.exhibit.tech/wp-content/uploads/2020/07/Travel-Hacks-400x300.jpg" alt="Your Destination" />
+            </div>
+            <div class="holder entry info">
+                <div class="title">Destination Information:</div>
+                <div id="entryHolder">
+                    <ul>
+                        <li id="departDate"></li>
+                        <li id="temp"></li>
+                        <li id="content"></li>
+                        <li id="country"></li>
+                        <li id="region"></li>
+                        <li id="language"></li>
+                        <li id="currency"></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <script>
+            // Check that service workers are supported
+            if ("serviceWorker" in navigator) {
+                // Use the window load event to keep the page load performant
+                window.addEventListener("load", () => {
+                    navigator.serviceWorker.register("/service-worker.js");
+                });
+            }
+        </script>
+    </body>
+</html>
