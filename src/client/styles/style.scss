@@ -10,10 +10,10 @@ body {
     grid-template-columns: 50vw, 50vw;
     grid-template-rows: 30vh 10vh 5vh 30vh;
     grid-template-areas:
-    "hd hd"
-    "ML MR"
-    "btn btn"
-    "BL BR";
+        "hd hd"
+        "ML MR"
+        "btn btn"
+        "BL BR";
     background: lightslategray;
     color: #f0d43a;
     justify-content: center;
@@ -55,7 +55,8 @@ body {
     width: 40vw;
     height: 30vh;
 }
-#destination { // forces the picture to fit the page in a box that is dynamically controlled by the veiwer's screen size.
+#destination {
+    // forces the picture to fit the page in a box that is dynamically controlled by the veiwer's screen size.
     width: 40vw;
     height: 30vh;
     object-fit: cover;
